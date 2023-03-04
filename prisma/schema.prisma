@@ -12,39 +12,39 @@ datasource db {
 
 model Record {
   id                       String   @id @default(auto()) @map("_id") @db.ObjectId
-  account_id               String?   @map("ACCOUNTID")
-  code                     String?   @map("CODE")
-  code_ma                  String?   @map("CODE_MA")
-  epoch                    String?   @map("PERIOADA")
-  contract_length          Int?     @map("CONTRACT_LENGTH")
-  contract_expiration_date String?   @map("CONTRACT_EXPIRATION_DATE")
-  remaining_receivables    Int?     @map("CREANTE_REST")
-  competitors              Int?     @map("CONCURENTI")
-  incidents                Int?     @map("INCIDENTE")
-  contract_status          String?   @map("STATUT_CONTRACT")
-  termination_request      Int?     @map("SOLICITARI_REZILIERE")
-  net_params               String?   @map("NET_PARAMS")
-  subscription_price       String?   @map("PRET_ABON")
-  quality_perception       String?   @map("QUALITY_PERCEPTION")
-  cost_perception          String?   @map("COST_PERCEPTION")
-  technology               String?   @map("TECHNOLOGY")
-  iptv_stb_quantity        String?   @map("IPTV_STB_QUANTITY")
-  inet_pack                String?   @map("INET_PACK")
-  qnt_calls                String?   @map("QNT_APELARI")
-  qnt_port_res             String?   @map("QNT_PORT_REZ")
-  avg_perception           String?   @map("AVG_PERCEPTION")
-  qnt_susp                 String?   @map("QNT_SUSP")
-  qnt_incident             Int?     @map("QNT_INCEDENT")
-  dissolution_month        String?   @map("LUNA_SUSPENDARI")
-  incident_month           String?   @map("LUNA_INCIDENT")
-  call_month               String?   @map("LUNA_APEL")
-  debth_month              String?   @map("LUNI_DATOR")
-  payment_period           String?   @map("PERIOADA_ACHITARII")
-  payment_sum              String?   @map("SUMA_ACHITARII")
-  multiply                 String?   @map("MULTIPLAY")
-  cnt_services             String?   @map("CNT_SERVICII")
-  is_churn                 Boolean? @map("IS_CHURN")
-  churn_date               String?   @map("CHURN_DATE")
+  account_id               String?   
+  code                     String?   
+  code_ma                  String?   
+  epoch                    String?  
+  contract_length          Int?     
+  contract_expiration_date String?   
+  remaining_receivables    Int?     
+  competitors              Int?     
+  incidents                Int?     
+  contract_status          String?   
+  termination_request      Int?    
+  net_params               String?   
+  subscription_price       String?  
+  quality_perception       String?   
+  cost_perception          String?  
+  technology               String?  
+  iptv_stb_quantity        String?   
+  inet_pack                String?   
+  qnt_calls                String?  
+  qnt_port_res             String?   
+  avg_perception           String?  
+  qnt_susp                 String?  
+  qnt_incident             Int?     
+  dissolution_month        String?   
+  incident_month           String?   
+  call_month               String?  
+  debth_month              String?   
+  payment_period           String?  
+  payment_sum              String?   
+  multiply                 String?   
+  cnt_services             String?   
+  is_churn                 Int? 
+  churn_date               String?  
 
    @@map("contracts")
 }
