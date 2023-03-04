@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs  https //pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Record {
+  id                       String   @id @default(auto()) @map("_id") @db.ObjectId
+  account_id               String?   @map("ACCOUNTID")
+  code                     String?   @map("CODE")
+  code_ma                  String?   @map("CODE_MA")
+  epoch                    String?   @map("PERIOADA")
+  contract_length          Int?     @map("CONTRACT_LENGTH")
+  contract_expiration_date String?   @map("CONTRACT_EXPIRATION_DATE")
+  remaining_receivables    Int?     @map("CREANTE_REST")
+  competitors              Int?     @map("CONCURENTI")
+  incidents                Int?     @map("INCIDENTE")
+  contract_status          String?   @map("STATUT_CONTRACT")
+  termination_request      Int?     @map("SOLICITARI_REZILIERE")
+  net_params               String?   @map("NET_PARAMS")
+  subscription_price       String?   @map("PRET_ABON")
+  quality_perception       String?   @map("QUALITY_PERCEPTION")
+  cost_perception          String?   @map("COST_PERCEPTION")
+  technology               String?   @map("TECHNOLOGY")
+  iptv_stb_quantity        String?   @map("IPTV_STB_QUANTITY")
+  inet_pack                String?   @map("INET_PACK")
+  qnt_calls                String?   @map("QNT_APELARI")
+  qnt_port_res             String?   @map("QNT_PORT_REZ")
+  avg_perception           String?   @map("AVG_PERCEPTION")
+  qnt_susp                 String?   @map("QNT_SUSP")
+  qnt_incident             Int?     @map("QNT_INCEDENT")
+  dissolution_month        String?   @map("LUNA_SUSPENDARI")
+  incident_month           String?   @map("LUNA_INCIDENT")
+  call_month               String?   @map("LUNA_APEL")
+  debth_month              String?   @map("LUNI_DATOR")
+  payment_period           String?   @map("PERIOADA_ACHITARII")
+  payment_sum              String?   @map("SUMA_ACHITARII")
+  multiply                 String?   @map("MULTIPLAY")
+  cnt_services             String?   @map("CNT_SERVICII")
+  is_churn                 Boolean? @map("IS_CHURN")
+  churn_date               String?   @map("CHURN_DATE")
+
+   @@map("contracts")
+}
