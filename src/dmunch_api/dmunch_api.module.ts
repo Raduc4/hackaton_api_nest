@@ -4,6 +4,6 @@ import { DmunchApiController } from './dmunch_api.controller';
 
 @Module({
   providers: [DmunchApiService],
-  controllers: [DmunchApiController]
+  controllers: [DmunchApiController],
 })
 export class DmunchApiModule {}

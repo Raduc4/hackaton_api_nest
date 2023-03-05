@@ -7,7 +7,7 @@ export class ContractController {
   constructor(private contractService: ContractService) {}
 
   @Get('/')
-  async getMany(): Promise<Record[]> {
+  async getMany(): Promise<{ 0: Record; 1: number }[]> {
     return await this.contractService.posts();
   }
 }

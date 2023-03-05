@@ -45,6 +45,7 @@ model Record {
   cnt_services             String?   
   is_churn                 Int? 
   churn_date               String?  
+  prediction_rate          Int?
 
    @@map("contracts")
 }
