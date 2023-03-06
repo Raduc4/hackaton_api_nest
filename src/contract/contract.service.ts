@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Get, Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 import { Record } from '@prisma/client';
 import { DmunchApiService } from 'src/dmunch_api/dmunch_api.service';
@@ -10,6 +10,7 @@ export class ContractService {
     private dmunch_service: DmunchApiService,
   ) {}
 
+  @Get()
   async posts() {
     let data = await this.prisma.record.findMany({ take: 10 });
     let result: Array<{ 0: Record; 1: number }> = [];
@@ -34,6 +35,7 @@ export class ContractService {
         Number(qnt_port_res),
       ]);
       let contractPredicted = { 0: element, 1: prediction };
+      result.push(contractPredicted);
     });
 
     return result;

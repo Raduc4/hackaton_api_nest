@@ -45,7 +45,47 @@ model Record {
   cnt_services             String?   
   is_churn                 Int? 
   churn_date               String?  
-  prediction_rate          Int?
+  prediction_rate          Float?
 
    @@map("contracts")
+}
+
+model Contract {
+  id                       String   @id @default(auto()) @map("_id") @db.ObjectId
+  account_id               String?   
+  code                     String?   
+  code_ma                  String?   
+  epoch                    String?  
+  contract_length          Int?     
+  contract_expiration_date String?   
+  remaining_receivables    Int?     
+  competitors              Int?     
+  incidents                Int?     
+  contract_status          String?   
+  termination_request      Int?    
+  net_params               String?   
+  subscription_price       String?  
+  quality_perception       String?   
+  cost_perception          String?  
+  technology               String?  
+  iptv_stb_quantity        String?   
+  inet_pack                String?   
+  qnt_calls                String?  
+  qnt_port_res             String?   
+  avg_perception           String?  
+  qnt_susp                 String?  
+  qnt_incident             Int?     
+  dissolution_month        String?   
+  incident_month           String?   
+  call_month               String?  
+  debth_month              String?   
+  payment_period           String?  
+  payment_sum              String?   
+  multiply                 String?   
+  cnt_services             String?   
+  is_churn                 Int? 
+  churn_date               String?  
+  prediction_rate          Float?
+
+   @@map("new_contracts")
 }

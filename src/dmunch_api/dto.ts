@@ -1,0 +1,3 @@
+class BodyPredict {
+  dmunch: string;
+}
